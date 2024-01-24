@@ -1,0 +1,56 @@
+.checkout-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.checkout-container .checkout-items {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.checkout-container .checkout-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.checkout-container .checkout-item:last-child {
+  border-bottom: none;
+}
+
+.checkout-container .checkout-item h4 {
+  margin-top: 0;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.checkout-container .checkout-item p {
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+}
+
+.checkout-container .total-amount {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 1rem;
+  color: #333;
+}
+
+/* Style pour les paragraphes, y compris le message "Votre panier est vide" */
+.checkout-container p {
+  text-align: center;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Vous pouvez ajouter des styles supplémentaires pour les boutons ou les formulaires de paiement si nécessaire */

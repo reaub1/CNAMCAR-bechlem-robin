@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <app-navbar>
+
+  <nav>
+    <ul>
+      <li><a routerLink="/">Accueil</a></li>
+      <li><a routerLink="/vehicles">Liste des Véhicules</a></li>
+      <li><a routerLink="/shopping-cart">Panier</a></li>
+      <li *ngIf="!isLoggedIn"><a routerLink="/login">Connexion</a></li>
+      <li *ngIf="!isLoggedIn"><a routerLink="/register">Inscription</a></li>
+      <li *ngIf="isLoggedIn"><a (click)="logout()">Déconnexion</a></li>
+      <li *ngIf="isAdmin"><a routerLink="/admin-dashboard">Tableau de Bord Admin</a></li>
+    </ul>
+  </nav>
+</app-navbar>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+  <footer>
+    <p>&copy; CNAM CAR - 2024</p>
+  </footer>
+
+</body>
+</html>

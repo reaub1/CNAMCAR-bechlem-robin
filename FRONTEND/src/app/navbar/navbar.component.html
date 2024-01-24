@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <a class="navbar-brand" routerLink="/">CNAM CAR</a>
+  <div class="nav-links">
+    
+    <a *ngIf="isLoggedIn" routerLink="/shopping-cart" class="button">
+      <i class="fas fa-shopping-cart"></i> 
+      Panier
+      <span *ngIf="cartItemsCount > 0" class="cart-count-badge">
+        {{ cartItemsCount }}
+      </span>
+    </a>
+
+    <a *ngIf="isLoggedIn" routerLink ="/home" class="button">Home</a>
+    <a *ngIf="isLoggedIn" routerLink ="/vehicles" class ="button"> Véhicules</a>
+    <a *ngIf="!isLoggedIn" routerLink="/register" class ="button">Inscription</a>
+    <a *ngIf="!isLoggedIn" routerLink="/login" class ="button">Connexion</a>
+    <a *ngIf="isLoggedIn" (click)="logout()" class ="button">Déconnexion</a>
+    <a *ngIf="isAdmin" routerLink="/admin-dashboard" class ="button">Admin</a>
+
+  </div>
+</nav>

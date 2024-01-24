@@ -1,0 +1,19 @@
+<div class="vehicle-details-container">
+  <div *ngIf="notificationMessage" class="notification-message">
+    {{ notificationMessage }}
+  </div>
+    <h2>Détails du Véhicule</h2>
+    <div *ngIf="vehicle" class="vehicle-details">
+      <h3>{{ vehicle.brand }} - {{ vehicle.model }}</h3>
+      <img src="{{ vehicle.imageUrl }}" alt="Image de {{ vehicle.model }}" class="vehicle-image">
+      <p>Prix: {{ vehicle.price | currency }}</p>
+      <p>Année: {{ vehicle.year }}</p>
+      <p>Kilométrage: {{ vehicle.km }}</p>
+      <p>Description: {{ vehicle.description }}</p>
+      <p *ngIf="vehicle.isSold">Vendu</p>
+      <p *ngIf="vehicle.isRented">Loué</p>
+      <p *ngIf="vehicle.isDamaged">Endommagé</p>
+      <button class="btn-add" (click)="addToCart()">Ajouter au Panier</button>
+    </div>
+  </div>
+  

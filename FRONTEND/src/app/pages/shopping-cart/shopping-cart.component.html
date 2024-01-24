@@ -1,0 +1,22 @@
+<div class="shopping-cart-container">
+    <h2>Panier d'Achat</h2>
+    <div *ngIf="notificationMessage" class="notification-message">
+    {{ notificationMessage }}
+    </div>
+    <div *ngIf="cartItems.length > 0; else emptyCart" class="cart-items">
+      <div *ngFor="let item of cartItems" class="cart-item">
+        <img src="{{ item.imageUrl }}" alt="Image de {{ item.model }}" class="vehicle-image">
+        <h4>{{ item.brand }} - {{ item.model }}</h4>
+        <p>Prix: {{ item.price }}</p>
+        <button class="btn-remove" (click)="removeFromCart(item)">Retirer</button>
+      </div>
+    </div>
+    <div class="cart-total">
+      <p>Total: {{ total | currency }}</p>
+    </div>
+    <button *ngIf="cartItems.length > 0" class="btn-pay" (click)="pay()">PAYER</button>
+    <ng-template #emptyCart>
+      <p>Votre panier est vide.</p>
+    </ng-template>
+  </div>
+  

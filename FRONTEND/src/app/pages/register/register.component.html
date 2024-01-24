@@ -1,0 +1,56 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<div class="register-container">
+  <h2>Inscription</h2>
+  <form (ngSubmit)="register()">
+    <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" [(ngModel)]="nom" name="nom" required>
+    </div>
+    <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" [(ngModel)]="prenom" name="prenom" required>
+    </div>
+    <div class="form-group">
+        <label for="login">Nom d'utilisateur</label>
+        <input type="text" id="login" [(ngModel)]="login" name="login" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required>
+    </div>
+    
+    
+    <div class="form-group">
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" [(ngModel)]="adresse" name="adresse" required>
+    </div>
+    <div class="form-group">
+        <label for="codepostal">Code Postal</label>
+        <input type="text" id="codepostal" [(ngModel)]="codepostal" name="codepostal" required>
+    </div>
+    <div class="form-group">
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" [(ngModel)]="ville" name="ville" required>
+    </div>
+    <div class="form-group">
+        <label for="sexe">Sexe</label>
+        <select id="sexe" [(ngModel)]="sexe" name="sexe">
+            <option value="f">Féminin</option>
+            <option value="m">Masculin</option>
+            <option value="o">Autre</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" [(ngModel)]="telephone" name="telephone" required>
+    </div>
+    <button type="submit" class="btn-register">S'inscrire</button>
+    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+  </form>
+</div>

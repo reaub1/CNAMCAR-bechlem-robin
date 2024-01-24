@@ -1,0 +1,18 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<div class="search-container">
+  <input type="text" [formControl]="searchControl" placeholder="Rechercher un véhicule...">
+</div>
+
+<div class="vehicle-list-container">
+    <h2>Liste des Véhicules</h2>
+    <div class="vehicle-list">
+      <div *ngFor="let vehicle of filteredVehicles" class="vehicle-item">
+        <h3>{{ vehicle.brand }} - {{ vehicle.model }}</h3>
+        <img src="{{ vehicle.imageUrl }}" alt="Image de {{ vehicle.model }}" class="vehicle-image">
+        <p>Prix: {{ vehicle.price | currency }}</p>
+        <a [routerLink]="['/vehicles', vehicle.id]">Voir Détails</a>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,10 @@
+<div class="home-container">
+    <div *ngIf="currentUser">
+        <h1>Bienvenue, {{ currentUser.username }}!</h1>
+      </div>
+    <h1>Bienvenue sur Notre Site de Vente de Véhicules</h1>
+    <p>Découvrez notre large sélection de véhicules.</p>
+    <a> Connectez vous ou enregistrer vous pour commencer l'aventure CNAM CAR</a>
+    <button class="btn-explore" routerLink="/vehicles">Explorer les Véhicules</button>
+</div>
+  

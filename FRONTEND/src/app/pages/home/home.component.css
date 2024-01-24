@@ -1,0 +1,49 @@
+.home-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.home-container h1 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: 'Roboto', sans-serif; /* Uniformité avec le reste de la page */
+}
+
+.home-container p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.home-container a {
+  color: #007aff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.home-container a:hover {
+  color: #005ecb;
+}
+
+.home-container .btn-explore {
+  background-color: #007aff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.home-container .btn-explore:hover {
+  background-color: #005ecb;
+}

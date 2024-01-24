@@ -1,0 +1,14 @@
+<div class="checkout-container">
+    <h2>Finalisation de l'Achat</h2>
+    <div *ngIf="cartItems.length > 0; else emptyCart" class="checkout-items">
+      <div *ngFor="let item of cartItems" class="checkout-item">
+        <h4>{{ item.brand }} - {{ item.model }}</h4>
+        <p>Prix: {{ item.price }}</p>
+      </div>
+      <p class="total-amount">Montant Total: {{ totalAmount }}</p>
+    </div>
+    <ng-template #emptyCart>
+      <p>Votre panier est vide.</p>
+    </ng-template>
+  </div>
+  

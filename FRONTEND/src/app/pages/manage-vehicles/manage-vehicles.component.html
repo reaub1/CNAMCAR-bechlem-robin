@@ -1,0 +1,13 @@
+<div class="manage-vehicles-container">
+    <h2>Gestion des Véhicules</h2>
+    <div class="vehicle-list">
+      <div *ngFor="let vehicle of vehicles" class="vehicle-item">
+        <h3>{{ vehicle.brand }} - {{ vehicle.model }}</h3>
+        <p>Prix: {{ vehicle.price }}</p>
+        <img class="vehicle-image" src="{{ vehicle.imageUrl }}" alt="{{ vehicle.brand }} {{ vehicle.model }}">
+
+        <button class="btn-delete" (click)="deleteVehicle(vehicle.id)">Supprimer</button>
+      </div>
+    </div>
+  </div>
+  
